@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@500;700;900&family=Rubik+Doodle+Shadow&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="max-w-3xl mx-auto">
+    <main class="py-4 bg-gradient-to-b from-slate-800 to-slate-300">
+        <section class="shadow-2xl p-4 text-center bg-teal-500 bg-image rounded-lg">
+            <nav class="drop-shadow-md p-4 mb-10 bg-transparent border rounded-md">
+                <h3 class="text-3xl text-yellow-50 text-left font-semibold">Tic tac toe</h3>
+            </nav>
+    
+            <div class="grid grid-cols-3 max-w-lg mx-auto text-7xl mb-10">
+                <button class="box h-28 text-center p-8 border-b-4 border-gray-500 cursor-pointer text-white"></button>
+                <button class="box h-28 text-center p-8 border-b-4 border-x-4 border-gray-500  cursor-pointer text-white"></button>
+                <button class="box h-28 text-center p-8 border-b-4 border-gray-500  cursor-pointer text-white"></button>
+                <button class="box h-28 text-center p-8 border-b-4 border-gray-500  cursor-pointer text-white"></button>
+                <button class="box h-28 text-center p-8 border-b-4 border-gray-500  border-x-4 cursor-pointer text-white"></button>
+                <button class="box h-28 text-center p-8 border-b-4 border-gray-500  cursor-pointer text-white"></button>
+                <button class="box h-28 text-center p-8 border-gray-500  cursor-pointer text-white"></button>
+                <button class="box h-28 text-center p-8 border-gray-500  border-x-4 cursor-pointer text-white"></button>
+                <button class="box h-28 text-center p-8 border-gray-500  cursor-pointer text-white"></button>
+    
+            </div>
+    
+            <div class="my-10">
+                <h2 class="text-2xl text-white ">The Winner is: <span id="winner"></span></h2>
+            </div>
+    
+            <div class="mb-4">
+                <button onclick="newGame()" class="btn mr-5">Play again</button>
+                <button onclick="reset()" class="btn btn-error text-white">Reset</button>
+            </div>
+    
+        </section>
+
+
+
+    </main>
+
+    <script src="./js/script.js"></script>
+    
+    
+</body>
+</html>
