@@ -12,3 +12,8 @@
     cursor: pointer;
     
 }
+
+#winner-gif{
+    width: 0;
+    transition: width 1s ease-out;
+}

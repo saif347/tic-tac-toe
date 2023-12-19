@@ -42,37 +42,48 @@ const enabledBtn = ()=>{
 
 const checkWinner = ()=>{
     for(let pattern of winPattern){
-        // console.log(boxes[pattern[0]].innerHTML, boxes[pattern[1]].innerHTML, boxes[pattern[2]].innerHTML);
-        let pos0val = boxes[pattern[0]].innerHTML;
-        let pos1val = boxes[pattern[1]].innerHTML;
-        let pos2val = boxes[pattern[2]].innerHTML;
+        console.log(boxes[pattern[0]].innerHTML, boxes[pattern[1]].innerHTML, boxes[pattern[2]].innerHTML);
+        let pos0val = boxes[pattern[0]].innerText;
+        let pos1val = boxes[pattern[1]].innerText;
+        let pos2val = boxes[pattern[2]].innerText;
 
        if(pos0val !== "" && pos1val !== "" && pos2val !== ""){
-        if(pos0val === pos1val && pos1val === pos2val){
+        if(pos0val === pos1val && pos0val === pos2val && pos1val === pos2val){
             disabledBtn();
-            winner.innerText = pos0val
+            winner.innerText = 'the winner is :'+ pos0val
+            winnerGif();
         }
        }
-
     }
 }
 
 const reset = ()=>{
     turnO = true;
+    winner.innerText = '';
    
     enabledBtn();
     boxes.forEach((box)=>{
         box.innerHTML= '';
 
     })
+    hideGif();
 }
 
 const newGame =()=>{
     turnO = true;
-   
+    winner.innerText = '';
     enabledBtn();
     boxes.forEach((box)=>{
         box.innerHTML= '';
 
     })
+    hideGif();
+}
+
+const winnerGif =()=>{
+    document.getElementById('winner-gif').style.width = '120px';
+
+}
+function hideGif (){
+    document.getElementById('winner-gif').style.width = '0';
 }
